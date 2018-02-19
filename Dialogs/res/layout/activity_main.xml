@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/hello_world"
+        />
+    <Button    
+            android:id="@+id/Toast"  
+            android:text="Making a Toast" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />
+    <Button    
+            android:id="@+id/AlertDialog"  
+            android:text="AlertDialog" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />
+    <Button 
+            android:id="@+id/DialogClass"
+            android:text="Dialog Class" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />   
+
+    <Button 
+            android:id="@+id/ActivityDialog"
+            android:text="ActivityDialog" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />  
+</LinearLayout>

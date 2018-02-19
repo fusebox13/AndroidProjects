@@ -1,0 +1,15 @@
+package com.example.hangman;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class CategoryManager extends Activity {
+	
+protected void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.category_manager);
+		
+	}
+
+}

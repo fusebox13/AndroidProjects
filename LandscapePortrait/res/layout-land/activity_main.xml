@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:background="#3500ffff"
+   android:layout_height="fill_parent"
+   android:layout_width="fill_parent"
+   android:padding="15dip"
+   android:orientation="horizontal">
+   <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_gravity="center"
+      android:paddingLeft="20dip"
+      android:paddingRight="20dip">
+      <TextView
+         android:text="Android Sudoku"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginBottom="20dip"
+         android:textSize="24.5sp" />
+      <TableLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="center"
+         android:stretchColumns="*">
+         <TableRow>
+            <Button
+               android:id="@+id/continue_button"
+               android:text="Continue" />
+            <Button
+               android:id="@+id/new_button"
+               android:text="New Game" />
+         </TableRow>
+         <TableRow>
+            <Button
+               android:id="@+id/about_button"
+               android:text="About" />
+            <Button
+               android:id="@+id/exit_button"
+               android:text="Exit" />
+         </TableRow>
+      </TableLayout>
+
+
+      <EditText
+         android:id="@+id/myedit"
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content" 
+         android:text="Contains ID"  />
+      <EditText
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content" 
+         android:text=" No ID"  />
+       <TextView
+         android:id="@+id/landscape_widget"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content" 
+         android:text="" 
+         android:visibility="gone"
+					/>
+   </LinearLayout>
+</LinearLayout>

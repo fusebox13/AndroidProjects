@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:id="@+id/michigan"
+      android:title="Michigan" />
+   
+   <item android:id="@+id/ohio"
+      android:title="Ohio" />
+   
+   <item android:id="@+id/california"
+      android:title="California"  />
+   
+   <item android:id="@+id/wisconsin"
+      android:title="Wisconsin" 
+      />
+      
+</menu>

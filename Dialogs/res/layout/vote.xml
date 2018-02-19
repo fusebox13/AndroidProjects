@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Enter your political preference"
+        />
+    <Button    
+            android:id="@+id/red"  
+            android:text="Red" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />
+    <Button 
+            android:id="@+id/blue"
+            android:text="Blue" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />   
+     <Button 
+            android:id="@+id/none"
+            android:text="undecided" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />   
+</LinearLayout>

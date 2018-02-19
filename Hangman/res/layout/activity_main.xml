@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/categoryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <customview.HangmanView
+            android:id="@+id/hangmanView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_span="7"
+                android:text=""
+                android:textSize="24sp"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/a"
+                android:text="@string/a" />
+
+            <Button
+                android:id="@+id/b"
+                android:text="@string/b" />
+
+            <Button
+                android:id="@+id/c"
+                android:text="@string/c" />
+
+            <Button
+                android:id="@+id/d"
+                android:text="@string/d" />
+
+            <Button
+                android:id="@+id/e"
+                android:text="@string/e" />
+
+            <Button
+                android:id="@+id/f"
+                android:text="@string/f" />
+
+            <Button
+                android:id="@+id/g"
+                android:text="@string/g" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/h"
+                android:text="@string/h" />
+
+            <Button
+                android:id="@+id/i"
+                android:text="@string/i" />
+
+            <Button
+                android:id="@+id/j"
+                android:text="@string/j" />
+
+            <Button
+                android:id="@+id/k"
+                android:text="@string/k" />
+
+            <Button
+                android:id="@+id/l"
+                android:text="@string/l" />
+
+            <Button
+                android:id="@+id/m"
+                android:text="@string/m" />
+
+            <Button
+                android:id="@+id/n"
+                android:text="@string/n" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/o"
+                android:text="@string/o" />
+
+            <Button
+                android:id="@+id/p"
+                android:text="@string/p" />
+
+            <Button
+                android:id="@+id/q"
+                android:text="@string/q" />
+
+            <Button
+                android:id="@+id/r"
+                android:text="@string/r" />
+
+            <Button
+                android:id="@+id/s"
+                android:text="@string/s" />
+
+            <Button
+                android:id="@+id/t"
+                android:text="@string/t" />
+
+            <Button
+                android:id="@+id/u"
+                android:text="@string/u" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/invisiblebutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/v"
+                android:text="@string/v" />
+
+            <Button
+                android:id="@+id/w"
+                android:text="@string/w" />
+
+            <Button
+                android:id="@+id/x"
+                android:text="@string/x" />
+
+            <Button
+                android:id="@+id/y"
+                android:text="@string/y" />
+
+            <Button
+                android:id="@+id/z"
+                android:text="@string/z" />
+
+            <Button
+                android:id="@+id/invisiblebutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

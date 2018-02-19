@@ -1,0 +1,30 @@
+package fileutils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
+import android.content.Context;
+
+public class FileUtils {
+	
+	Context context;
+	
+	FileUtils(Context context)
+	{
+		this.context = context;
+	}
+	
+	public void createFile(String fileName)
+	{
+		File f = new File(context.getFilesDir(), fileName);
+		try {
+			PrintStream ps = new PrintStream(f);
+			ps.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

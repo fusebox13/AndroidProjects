@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+ <TextView
+    android:id="@+id/phraseCompletion"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="This is where we your Phrase Completion"
+  />
+<Spinner  
+    android:id="@+id/myPhraseSpinner"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+  />
+ <Button
+    android:id="@+id/callPhraseCompletion"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Click here to get the Phrase Completion"
+  />
+    
+    
+<TextView
+    android:id="@+id/jokeRating"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="This is where we get our Joke Rating"
+  />
+ 
+<TextView
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="---Humorous Headlines----"
+  />
+<Spinner  
+    android:id="@+id/myJokeSpinner"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+  />
+ <Button
+    android:id="@+id/callJokeRater"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Click here to rate Joke"
+  />
+    
+</LinearLayout>

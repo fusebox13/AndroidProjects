@@ -1,0 +1,97 @@
+package com.example.preferences;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+
+public class MainActivity extends Activity {
+
+    MyRadioButtons myRadioButtons;
+    MyCheckBox myCheckBox;
+    MyEditText myEditText;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        myCheckBox = new MyCheckBox(R.id.student);
+        
+        int[] radioButtonResources={R.id.female, R.id.male, R.id.unknown};
+        myRadioButtons = new MyRadioButtons(radioButtonResources);
+        
+        myEditText = new MyEditText(R.id.name);
+        
+    }
+
+   
+    //*****************   Inner class for RadioButtons ************************
+    class MyRadioButtons implements OnClickListener
+    {
+        int[] myResources;
+        RadioButton[] myRbs;
+        MyRadioButtons(int[] resources)
+        {
+            myResources = resources;
+            myRbs = new RadioButton[resources.length];
+            for(int i=0; i < resources.length; i++)
+            {
+                myRbs[i] = (RadioButton)findViewById(resources[i]);
+                myRbs[i].setOnClickListener(this);
+            }
+        }
+        @Override
+        public void onClick(View v) {
+            RadioButton rb= (RadioButton)v;
+            Log.d("Mine", "CheckBox clicked: "+ rb.getText());            
+        }
+        
+    }
+    
+    //*****************   Inner class for Checkbox   **************************
+    class MyCheckBox implements OnClickListener
+    {
+        CheckBox myCb;
+        MyCheckBox(int resource)
+        {
+            myCb = (CheckBox)findViewById(resource);
+            myCb.setOnClickListener(this);
+        }
+        @Override
+        public void onClick(View v) {
+            Log.d("Mine", "CheckBox clicked: "+ myCb.getText());
+            
+        }
+    }
+     //*****************  Inner class for EditText   **************************
+    class MyEditText implements OnKeyListener
+    {
+        EditText myEdit;
+
+        MyEditText(int resource)
+        {
+            myEdit = (EditText)findViewById(resource);
+            myEdit.setOnKeyListener(this);
+        }
+        public boolean onKey(View v, int keyCode, KeyEvent event) {
+            if (event.getAction() == KeyEvent.ACTION_DOWN)
+                if (keyCode == KeyEvent.KEYCODE_ENTER)
+                {
+                    Log.d("Mine", "Enter key with value=" + myEdit.getText());
+                    return true;
+                }
+            return false;
+        }
+
+    }
+    // *****************  End of Inner class for EditText   *******************
+
+}

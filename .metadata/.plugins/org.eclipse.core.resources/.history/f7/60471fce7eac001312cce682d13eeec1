@@ -1,0 +1,114 @@
+package com.example.hangman;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import fileutils.FileUtils;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class CategoryManager extends Activity implements AdapterView.OnItemClickListener{
+	
+	ArrayList<String> categories = new ArrayList();
+	ArrayAdapter<String> categoriesArrayAdapter;
+	ListView categoryList;
+	FileUtils fileUtils;
+	private static final int WORD_FILE_MANAGER = 2;
+	
+	private int listViewPosition;
+	
+protected void onCreate(Bundle savedInstanceState) 
+{
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.category_manager);
+		
+		try {
+			categories = new ArrayList<String>(Arrays.asList(this.getAssets().list("categories")));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		categoryList = (ListView)findViewById(R.id.listView1);
+		
+		categoriesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
+		
+		categoryList.setAdapter(categoriesArrayAdapter);
+		categoryList.setOnItemClickListener(this);
+		categoriesArrayAdapter.notifyDataSetChanged();
+		
+		registerForContextMenu(categoryList);
+		
+		fileUtils = new FileUtils(this);
+		
+}
+
+@Override
+public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+{
+	TextView listItem = (TextView)view;
+	String str = listItem.getText() + "Position: " + position + " ID: " + id;
+	Log.d("onItemClick", str);
+	listViewPosition = position;
+	//openWordListEditor();
+	
+		
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void onCreateContextMenu(ContextMenu menu,  View v, ContextMenu.ContextMenuInfo menuInfo) 
+{
+    
+	super.onCreateContextMenu(menu, v, menuInfo);
+    MenuInflater inflater;
+    inflater = getMenuInflater();
+    inflater.inflate(R.menu.category_context_menu, menu);
+}
+
+@Override
+public boolean onContextItemSelected(MenuItem item) {  
+    super.onContextItemSelected(item);
+    int index = item.getItemId();
+    String text = item.getTitle().toString();
+    
+    switch (item.getItemId())
+    {
+    case R.id.editWordList:
+    	Log.d("CategoryManager.onContextItemSelected", "editWordListSelected: " + listViewPosition);
+    	break;
+    case R.id.deleteCategory:
+    	Log.d("CategoryManager.onContextItemSelected", "deleteCategory: " + listViewPosition);
+        break;
+    default:
+        break;
+    }
+
+    return true;
+}
+
+
+public void openWordListEditor()
+{
+	Intent intent = new Intent(CategoryManager.this, WordListEditor.class);
+    startActivityForResult(intent, WORD_FILE_MANAGER);
+}
+
+}

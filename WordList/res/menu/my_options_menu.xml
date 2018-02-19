@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+   
+   <item android:id="@+id/sort_words"
+      android:title="Sort Words"  />
+   
+   <item android:id="@+id/insert_at_front"
+      android:title="Insert at Front"/>
+   
+   <item android:id="@+id/insert_at_end"
+      android:title="Insert at End"/>
+     
+</menu>

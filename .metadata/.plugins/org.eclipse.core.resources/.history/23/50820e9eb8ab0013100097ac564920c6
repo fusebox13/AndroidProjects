@@ -1,0 +1,64 @@
+package com.example.hangman;
+
+import java.io.File;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class CategoryManager extends Activity implements AdapterView.OnItemClickListener{
+	
+	ArrayList<String> categories = new ArrayList();
+	ArrayAdapter<String> categoriesArrayAdapter;
+	ListView categoryList;
+	
+protected void onCreate(Bundle savedInstanceState) 
+{
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.category_manager);
+		
+		categories.add("first category");
+		categories.add("second category");
+		categories.add("third category");
+		
+		categoryList = (ListView)findViewById(R.id.listView1);
+		
+		categoriesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
+		
+		categoryList.setAdapter(categoriesArrayAdapter);
+		categoryList.setOnItemClickListener(this);
+		categoriesArrayAdapter.notifyDataSetChanged();
+		
+}
+
+@Override
+public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+{
+	TextView listItem = (TextView)view;
+	String str = listItem.getText() + "Position: " + position + " ID: " + id;
+	listFiles();
+	// TODO Auto-generated method stub
+	
+}
+
+public void listFiles()
+{
+	File f = this.getFilesDir();
+	File[] filesList = f.listFiles();
+	Log.d("Fileslistlength", "" + filesList.length);
+	for(int i = 0; i < filesList.length; i++)
+	{
+		Log.d("Files", filesList[i].toString());
+	}
+	
+}
+
+}

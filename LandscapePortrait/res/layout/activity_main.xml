@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:background="#3500ffff"
+   android:layout_height="fill_parent"
+   android:layout_width="fill_parent"
+   android:padding="30dip"
+   android:orientation="horizontal">
+   <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_gravity="center">
+      <TextView
+         android:text="Android Sudoku"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginBottom="25dip"
+         android:textSize="24.5sp" />
+      <Button
+         android:id="@+id/continue_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Continue" />
+      <Button
+         android:id="@+id/new_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="New Game" />
+      <Button
+         android:id="@+id/about_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="About" />
+      <Button
+         android:id="@+id/exit_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Exit" />
+
+      <EditText
+         android:id="@+id/myedit"
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content" 
+         android:text="Contains ID"  />
+      <EditText
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content" 
+         android:text=" No ID"  />
+   </LinearLayout>
+</LinearLayout>

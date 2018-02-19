@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RadioGroup
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <RadioButton android:id="@+id/rectangle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Rectangle" />
+      <RadioButton android:id="@+id/oval"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Oval" />  
+      <RadioButton android:id="@+id/line"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Line" />
+    </RadioGroup>
+    
+ 
+        
+        <RadioGroup
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+          <RadioButton android:id="@+id/red"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#ff8080"
+              android:text="Red" />
+          <RadioButton android:id="@+id/green"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#80ff80"
+              android:text="Green" />
+          <RadioButton android:id="@+id/blue"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#8080ff"
+              android:text="Blue" />
+        </RadioGroup>
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >  
+            
+            <Button    
+              android:id="@+id/clear" 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" 
+              android:text="Clear" />
+            
+            <Button    
+              android:id="@+id/undo" 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" 
+              android:text="Undo" />
+         </LinearLayout>
+        
+   
+   <com.example.mytouchscreendrawingprogram.MyDrawingView
+      android:id="@+id/myDraw1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+  />
+</LinearLayout>

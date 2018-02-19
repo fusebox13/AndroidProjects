@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.simpleintent2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.simpleintent2.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".JokeRater"
+          android:label="@string/app_name">
+            <intent-filter>
+                  <action android:name="edu.wccnet.clem.joke_rater.action"></action>                  
+                  <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+		</activity>
+		
+		<activity android:name=".PhraseCompleter"
+         android:label="@string/app_name">
+            <intent-filter>
+                  <action android:name="edu.wccnet.clem.phrase_completer_action"></action>                  
+                  <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+		</activity>
+    </application>
+
+</manifest>

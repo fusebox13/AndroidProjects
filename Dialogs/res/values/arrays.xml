@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <array name="items">
+      <item>Small</item>
+      <item>Medium</item>
+      <item>Big</item>
+   </array>
+</resources>

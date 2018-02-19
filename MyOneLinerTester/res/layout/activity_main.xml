@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  >
+ 
+       <Button    
+                android:id="@+id/random"     
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"  
+                android:text="Random" />
+                
+       <Button    
+                android:id="@+id/size"     
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"  
+                android:text="Size?" />
+                
+       <Button    
+                android:id="@+id/pick"     
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"  
+                android:text="Pick from List" />
+  
+       <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Enter index of One Liner and hit ENTER Key"  />
+       <EditText
+            android:id="@+id/index"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text=""  />
+            
+       <TextView    
+            android:id="@+id/results"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text=""  />
+  
+          
+  </LinearLayout>

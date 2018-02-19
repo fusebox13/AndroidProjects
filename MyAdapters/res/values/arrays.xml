@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="countries_array">
+        <item>Antarctica</item>
+        <item>Argentina</item>
+        <item>Bermuda</item>
+        <item>Bolivia</item>
+        <item>Bulgaria</item>
+        <item>Cambodia</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>Equador</item>
+        <item>England</item>
+        <item>France</item>
+        <item>Norway</item>
+        <item>Portugal</item>
+        <item>Russia</item>
+        <item>Spain</item>
+        <item>Switzerland</item>
+        <item>Thailand</item>
+        <item>Turkey</item>
+        <item>United States</item>
+        <item>Yugoslavia</item>
+    </string-array> 
+</resources>

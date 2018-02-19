@@ -1,0 +1,103 @@
+package com.example.dialogs;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+
+public class MainActivity extends Activity
+
+implements OnClickListener, RecordVote
+{
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button b = (Button)findViewById(R.id.Toast);
+        b.setOnClickListener(this);
+        Button b1 = (Button)findViewById(R.id.AlertDialog);
+        b1.setOnClickListener(this);
+        Button b2 = (Button)findViewById(R.id.ActivityDialog);
+        b2.setOnClickListener(this);
+        Button b3 = (Button)findViewById(R.id.DialogClass);
+        b3.setOnClickListener(this);
+    }
+    public void onClick(View v) {
+        int index = v.getId();
+        switch(index)
+        {
+        case R.id.Toast:
+            Toast toast = Toast.makeText(this /*Needs a Context*/, "My First Toast", Toast.LENGTH_SHORT);
+            toast.show();
+            break;
+        case R.id.AlertDialog:
+            startAlertDialog();
+            break;
+
+        case R.id.DialogClass:
+            startDialogClass();
+            break;
+        case R.id.ActivityDialog:
+            startActivityDialog();
+            break;
+        }
+
+    }
+    // ******************** INNER CLASS **************************************
+    class MyInnerClass implements DialogInterface.OnClickListener
+    {
+
+		@Override
+		public void onClick(DialogInterface dialog, int i) {
+	                Log.d("Mine", "Dialog OnClick, index="+i);
+	            }
+			
+	}
+    	
+
+
+    void startAlertDialog()
+    {
+    	Log.d("Mine", "AlertDialog");
+        AlertDialog.Builder ad = new AlertDialog.Builder(this);
+
+        //ad.setTitle("Testing AlertDialog");
+        ad.setTitle(R.string.alert_title);
+
+        // See if you can take the following and make it into an Inner class to 
+        // make this easier to understand
+        MyInnerClass dc= new MyInnerClass(); 
+
+        String[] items = {"Small", "Medium", "Big"};
+
+        //ad.setItems(items, dc);
+        ad.setItems(R.array.items, dc);
+
+        ad.show();
+
+
+    }
+    void startDialogClass()
+    {
+        
+    }
+    void startActivityDialog()
+    {
+    }
+	@Override
+	public void vote(int i) {
+        Log.d("Mine", "I voted: "+ i);
+        
+    }
+    
+    
+
+}

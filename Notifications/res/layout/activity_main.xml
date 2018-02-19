@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:padding="10dip"> 
+
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+             android:id="@+id/add_notification"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Add Notification"
+           />
+        <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Notification ID (int)"
+            />
+         <EditText
+             android:id="@+id/notification_id"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="0"
+           />
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Count (int)"
+            />
+         <EditText
+             android:id="@+id/count"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="0"
+           />
+
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Ticker Text"
+            />
+         <EditText
+             android:id="@+id/ticker_text"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Ticker Text"
+           />
+
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Content Title"
+            />
+         <EditText
+             android:id="@+id/content_title"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Content Title"
+           />
+
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Content Text"
+            />
+         <EditText
+             android:id="@+id/content_text"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Content Text"
+           />
+           
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Content SubText"
+            />
+         <EditText
+             android:id="@+id/content_subtext"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Content SubText"
+           />
+
+
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Content Info"
+            />
+         <EditText
+             android:id="@+id/content_info"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="Content Info"
+           />
+
+          <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Action"
+            />
+         <EditText
+             android:id="@+id/action"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="edu.wccnet.mynotification.action"
+           />
+           
+         <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Message for Intent"
+            />
+            
+         <EditText
+             android:id="@+id/msgForIntent"
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" 
+             android:text="This is your Mother and you need to be home by mid-night.  Love Mom"
+           />
+       
+         <CheckBox
+             android:id="@+id/lights"
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content" 
+             android:text="Lights"
+           />
+         <CheckBox
+             android:id="@+id/sound"
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content" 
+             android:text="Sound"
+           />
+         <CheckBox
+             android:id="@+id/vibrate"
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content" 
+             android:text="Vibrate"
+           />
+    </LinearLayout>
+</ScrollView>

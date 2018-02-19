@@ -1,0 +1,56 @@
+package com.example.mytouchscreendrawingprogram;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.RadioButton;
+
+public class MainActivity extends Activity  implements OnClickListener{
+    
+    MyDrawingView myDrawingView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        int[] resources= {R.id.red, R.id.green, R.id.blue, R.id.rectangle, R.id.oval, R.id.line};
+    
+        for (int i=0; i < resources.length; i++)
+        {
+            RadioButton rb = (RadioButton)findViewById(resources[i]);
+            rb.setOnClickListener(this);
+        }
+        Button b = (Button)findViewById(R.id.clear);
+        b.setOnClickListener(this);
+        b = (Button)findViewById(R.id.undo);
+        b.setOnClickListener(this);
+        
+        myDrawingView = (MyDrawingView)findViewById(R.id.myDraw1);
+        myDrawingView.setOnTouchListener(myDrawingView);
+        
+        myDrawingView.update(R.id.red); // Initialize to red pen
+        myDrawingView.update(R.id.rectangle); // Start out drawing rectangles
+        
+        RadioButton rb = (RadioButton)findViewById(R.id.red);
+        rb.setChecked(true);  // make the red radio button checked
+        rb = (RadioButton)findViewById(R.id.rectangle);
+        rb.setChecked(true);  // make the rectangle radio button checked
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public void onClick(View v) 
+    {
+        myDrawingView.update(v.getId());
+    }
+
+}

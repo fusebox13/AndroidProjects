@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent" >
+
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  <EditText
+    android:id="@+id/myEditText1"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:hint="Enter key creates a new line"
+  />
+  <EditText
+    android:id="@+id/myEditText2"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:hint="Enter key is captured"
+  />
+  
+  <TextView
+    android:id="@+id/normalTextView"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:hint="Normal TextView"
+  />
+    
+  <com.example.enhancedtextview.MyDrawTextView
+      android:id="@+id/myDrawTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:scrollbars="vertical"
+      android:textColor="@color/notepad_text"
+      android:fadingEdge="vertical"       
+      android:hint="Enhanced TextView"
+  />
+</LinearLayout>
+</ScrollView>

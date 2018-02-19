@@ -1,0 +1,78 @@
+package com.example.wordlist;
+
+import java.util.ArrayList;
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+
+public class MainActivity extends Activity 
+                 implements AdapterView.OnItemClickListener{
+
+    ArrayList<String> myWordListArray = new ArrayList<String>();
+    ArrayAdapter<String> arrayListAdapter;
+    ListView myListView;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+        myListView = (ListView)findViewById(R.id.myListView);
+
+        arrayListAdapter= 
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myWordListArray);
+       
+        myListView.setAdapter(arrayListAdapter);
+
+        // Not really going to use ListView OnClickListener, but it could be useful for other applications
+        myListView.setOnItemClickListener(this);
+
+        updateFromResource(R.array.countries_array);
+    }
+
+// It is Important that we never change the address of our ArrayList.  
+    private void updateList()
+    {
+        arrayListAdapter.notifyDataSetChanged();
+    }
+    // This is called when on the first program call to initialize words from an array resource
+    public void updateFromResource(int resource)
+    {
+        String[] words =  getResources().getStringArray(resource);
+        myWordListArray.clear();
+        for (int i=0; i < words.length; i++)
+            myWordListArray.add(words[i]);
+
+        updateList();
+    }
+
+    // This is called when when just read in a new category to work with
+    public void updateFromArrayList(ArrayList<String> arr)
+    {
+        myWordListArray.clear();
+        for (int i=0; i < arr.size(); i++)
+            myWordListArray.add(arr.get(i));
+
+        updateList();
+    }
+
+
+
+
+    // Not doing anything with the normal Item click ... just logging for now
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        // GridView grid = (GridView) parent;
+        TextView text = (TextView) view;
+        String str =text.getText() + " pos="+position + " id=" +id;
+        Log.d("Mine", "onItemClick: "+str);
+    }
+
+
+
+}

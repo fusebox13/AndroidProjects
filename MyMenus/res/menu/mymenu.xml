@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:id="@+id/settings"
+      android:title="res:settings..."
+      android:alphabeticShortcut="s" />
+   
+   <item android:id="@+id/add"
+      android:title="res:Add"
+      android:icon="@drawable/ic_menu_add"
+      android:showAsAction="ifRoom"
+      android:alphabeticShortcut="a" />
+   
+   <item android:id="@+id/refresh"
+      android:title="res:Refresh" 
+      android:icon="@drawable/ic_menu_refresh"
+      android:showAsAction="ifRoom"
+      android:alphabeticShortcut="r" />
+   
+   <item android:id="@+id/toggle"
+      android:title="@string/turn_on_sometimes"
+      android:showAsAction="ifRoom"
+      />
+      
+   <item android:id="@+id/always"
+      android:title="always"
+      android:showAsAction="ifRoom"
+       />  
+   <item android:id="@+id/sometimes"
+      android:title="sometimes"
+      android:alphabeticShortcut="2" />
+</menu>

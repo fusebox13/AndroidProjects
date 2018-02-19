@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+   xmlns:android="http://schemas.android.com/apk/res/android">
+   <CheckBoxPreference
+      android:key="music"
+      android:title="Music"
+      android:summary="Play background music"
+      android:defaultValue="true" />
+   <CheckBoxPreference
+      android:key="hint"
+      android:title="Hint"
+      android:summary="Show hint during play"
+      android:defaultValue="true" />
+    <EditTextPreference
+      android:key="name"
+      android:title="Name"
+      android:summary="Show Default Name to use"
+      android:defaultValue="Fred" />

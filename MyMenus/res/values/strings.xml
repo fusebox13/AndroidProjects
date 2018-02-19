@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyMenus</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="turn_on_sometimes">res: Turn ON Sometimes</string>
+	<string name="turn_off_sometimes">res: Turn OFF Sometimes</string>
+
+</resources>

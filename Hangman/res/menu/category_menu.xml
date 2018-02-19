@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/createCategory"
+      android:title="Create Category"
+      android:icon="@drawable/ic_action_new" 
+      android:showAsAction="ifRoom" 
+      />
+    
+    <item android:id="@+id/sortAZ"
+      android:title="Sort Z-A"
+      android:showAsAction="ifRoom" 
+      />
+    
+
+</menu>

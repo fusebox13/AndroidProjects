@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+ <LinearLayout
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:orientation="horizontal">
+  
+        <TextView  
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="name"
+            />
+          <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text=""
+          />
+  
+          <TextView  
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="age"     />
+          <EditText
+            android:id="@+id/age"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text=""   />
+            
+             <TextView  
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="height"     />
+          <EditText
+            android:id="@+id/height"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text=""   />
+  </LinearLayout>
+  
+   <LinearLayout
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:orientation="horizontal">
+          <EditText
+            android:id="@+id/primary_key"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text=""   />
+          
+              <Button    
+                android:id="@+id/insert"     
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"  
+                android:text="insert" />
+                         
+              <Button    
+                android:id="@+id/delete"  
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="delete" />
+                          
+            
+  </LinearLayout>
+  
+  
+  
+  <ScrollView
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:padding="10dip"> 
+     
+          <TextView    
+            android:id="@+id/results"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text=""     />
+  </ScrollView>
+</LinearLayout>

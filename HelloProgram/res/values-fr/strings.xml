@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="hello_world">Bonjour tout le monde, FirstActivity!</string>
+    <string name="app_name">Ma demande</string>
+
+</resources>

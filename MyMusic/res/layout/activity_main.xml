@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView    
+        android:id="@+id/display"  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="" />       
+    
+  
+     <Button    
+        android:id="@+id/baby_love"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="baby_love.wav" />
+      <Button    
+        android:id="@+id/gitarzan"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="gitarzan.wav" />
+        
+      <Button    
+        android:id="@+id/lady_godiva"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="lady_godiva.wav" />
+
+      <Button    
+        android:id="@+id/peter_piper"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="peter_piper.amr" />
+      <Button    
+        android:id="@+id/she_sells"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="she_sells.mp3" />    
+      <Button    
+        android:id="@+id/numbers"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="numbers.3gp" />
+      
+      <Button    
+        android:id="@+id/stop"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="stop" />
+</LinearLayout>

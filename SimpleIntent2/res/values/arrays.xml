@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jokes_array">
+        <item>Include Your Children when Baking Cookies</item>
+        <item>Something Went Wrong in Jet Crash, Expert Says</item>
+        <item>Police Begin Campaign to Run Down Jaywalkers</item>
+        <item>Safety Experts Say School Bus Passengers Should Be Belted</item>
+        <item>Drunk Gets Nine Months in Violin Case</item>
+        <item>Survivor of Siamese Twins Joins Parents</item>
+        <item>Iraqi Head Seeks Arms</item>
+        <item>British Left Waffles on Falkland Islands</item>
+        <item>Eye Drops Off Shelf</item>
+        <item>Teacher Strikes Idle Kids</item>
+        <item>President Wins on Budget, But More Lies Ahead</item>
+        <item>Enraged Cow Injures Farmer with Ax</item>
+        <item>Plane Too Close to Ground, Crash Probe Told</item>
+        <item>Miners Refuse to Work after Death</item>
+        <item>Juvenile Court to Try Shooting Defendant</item>
+      
+    </string-array>
+    
+      <string-array name="phrase_array">
+        <item>Mary had a little _ _ _ _</item>
+        <item>Its fleece was as white as _ _ _ _</item>
+        <item>Fee Fie Foe _ _ _</item>
+        <item>Bridge over troubled _ _ _ _ _</item>
+        <item>Yesterday all my troubles were so _ _ _     _ _ _ _</item>
+        <item>I want to hold your _ _ _ _</item>
+        <item>Peter _ _ _ _ _ picked a peck of peppers</item>
+        <item>Jack be nimble, Jack be _ _ _ _ _</item>
+        
+    </string-array>
+</resources>

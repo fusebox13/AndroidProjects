@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/refresh"
+      android:title="@string/refresh" 
+      android:icon="@drawable/ic_menu_refresh"
+      android:showAsAction="ifRoom"
+      android:alphabeticShortcut="r" />
+    
+    
+    <item android:id="@+id/categoryManager"
+        android:title="@string/category_manager"
+        android:showAsAction="ifRoom" />
+        
+
+</menu>
